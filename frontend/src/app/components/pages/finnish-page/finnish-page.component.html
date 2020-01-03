@@ -1,0 +1,75 @@
+<div class="finnish-bg">
+<div class="tile is-ancestor">
+  <div class="tile is-4 is-vertical is-parent">
+    <div class="tile is-child box">
+      <figure class="image is-280x280">
+        <img src="https://www.1zoom.me/big2/108/327096-Sepik.jpg">
+      </figure>  
+    </div>
+    <div class="tile is-child box">
+      <p class="title">Christmas List</p>
+      <nav class="panel">
+        <p class="panel-heading has-text-weight-bold">
+            <i class="fas fa-clipboard"></i>
+          Toys
+        </p>
+        <a *ngFor="let list of lists" (click)="onClick(list)" class="panel-block" [class.is-active]="list === selectedList">
+          <span class="panel-icon">
+            <i class="fas fa-tasks" aria-hidden="true"></i>
+          </span>
+          {{ list.name }}
+        </a>
+      
+
+      <div *ngIf="addNew">
+          <div>
+            <div class="column">
+                <div class="columns">
+                    <div class="column is-one-fifth">
+                        Name:
+                    </div>
+                    <div class="column">
+                        <input type="text" class="input" (keyup)="onKey()" #newListName>
+                    </div>
+                </div>
+            </div>
+          </div>
+        <div class="columns" >
+          <div class="column">
+              <a class="button is-success is-fullwidth" [attr.disabled]="saveNew ? true : null" (click)="onAddNewElementToList()" >
+                  Save
+              </a>
+          </div>
+          <div class="column">
+              <a class="button is-danger is-fullwidth" (click)="toggleSection()">
+                  Cancel
+              </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div class="button-save">
+      <a class="button is-success is-fullwidth" (click)="!addNew && toggleSection()" [attr.disabled]="addNew? true : null">
+        Add your favorite toys
+      </a>
+    </div>
+    <div class="button-delete">
+      <a class="button is-success is-fullwidth" (click)="onDeleteList()">
+        Delete
+      </a>
+    </div>
+    </div>
+  </div>
+  <div class="tile is-8 is-vertical is-parent">
+    <div class="tile is-child box">
+      <p class="title">Minulla on joulu</p>
+      
+      <div class="column">
+        <figure class="image is-380x380">
+          <img src="https://www.finlandtours.fi/wp-content/uploads/2016/10/santa-and-reindeer-rovaniemi.jpg">
+        </figure>
+      </div>
+    </div>
+  </div>
+</div>
+</div>

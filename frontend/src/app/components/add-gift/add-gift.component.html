@@ -1,8 +1,7 @@
 <div class="modal" [class.is-active]=true>
     <div class="modal-background"></div>
     <div class="modal-content">
-        <button class="delete" aria-label="close"></button>
-      <!-- Any other Bulma elements you want -->
+        <button class="delete" aria-label="close" (click)="closeModal()"></button>
     <div class="tile is-child box">
       <p class="title">Christmas List</p>
       <nav class="panel">
@@ -55,6 +54,4 @@
     </div>
     </div>
 </div>
-<!-- <button class="modal-close is-large" aria-label="close" (click)="closeModal()"></button> -->
 </div>
-<!-- </div> -->

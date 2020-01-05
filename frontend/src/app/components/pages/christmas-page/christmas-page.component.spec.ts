@@ -1,21 +1,21 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { GermanPageComponent } from './german-page.component';
+import { ChristmasPageComponent } from './christmas-page.component';
 
-describe('GermanPageComponent', () => {
-	let component: GermanPageComponent;
-	let fixture: ComponentFixture<GermanPageComponent>;
+describe('ChristmasPageComponent', () => {
+	let component: ChristmasPageComponent;
+	let fixture: ComponentFixture<ChristmasPageComponent>;
 
 	beforeEach(
 		async(() => {
 			TestBed.configureTestingModule({
-				declarations: [ GermanPageComponent ]
+				declarations: [ ChristmasPageComponent ]
 			}).compileComponents();
 		})
 	);
 
 	beforeEach(() => {
-		fixture = TestBed.createComponent(GermanPageComponent);
+		fixture = TestBed.createComponent(ChristmasPageComponent);
 		component = fixture.componentInstance;
 		fixture.detectChanges();
 	});

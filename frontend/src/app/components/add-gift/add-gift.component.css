@@ -1,0 +1,12 @@
+.button-delete {
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+.button-save,
+.button-delete {
+	margin-right: 25em;
+}
+.close-button {
+	margin-top: 20px;
+	margin-left: 33em;
+}

@@ -1,27 +1,17 @@
-<div class="romanian-bg">
-<div class="tile is-ancestor">
-  <div class="tile is-4 is-vertical is-parent">
-    <div class="tile is-child box">
-      <figure class="image is-280x280">
-        <img src="https://i.pinimg.com/originals/1a/35/98/1a35984a9af89a5a68054411414de97e.jpg">
-      </figure>    
-    </div>
-    
+<div class="modal" [class.is-active]=true>
+    <div class="modal-background"></div>
+    <div class="modal-content">
+        <button class="delete" aria-label="close"></button>
+      <!-- Any other Bulma elements you want -->
     <div class="tile is-child box">
       <p class="title">Christmas List</p>
       <nav class="panel">
-        <p class="panel-heading has-text-weight-bold">
-            <i class="fas fa-clipboard"></i>
-          Toys
-        </p>
         <a *ngFor="let list of lists" (click)="onClick(list)" class="panel-block" [class.is-active]="list === selectedList">
           <span class="panel-icon">
             <i class="fas fa-tasks" aria-hidden="true"></i>
           </span>
           {{ list.name }}
         </a>
-      
-
       <div *ngIf="addNew">
           <div>
             <div class="column">
@@ -60,20 +50,11 @@
         Delete
       </a>
     </div>
+    <div class="close-button">
+        <a class="button is-success is-fullwidth" (click)="closeModal()">Close</a>
     </div>
-  </div>
-  <!--Aici o sa bagam mosul-->
-  <div class="tile is-8 is-vertical is-parent">
-    <div class="tile is-child box">
-      <p class="title">Moș Crăciun</p>
-      <div class="column">
-        
-     <figure class="image is-280x280">
-        <img src="https://editiadedimineata.ro/wp-content/uploads/2018/12/santa-claus-orig.jpg">
-      </figure>
-        
-      </div>
     </div>
-  </div>
-  </div>
 </div>
+<!-- <button class="modal-close is-large" aria-label="close" (click)="closeModal()"></button> -->
+</div>
+<!-- </div> -->

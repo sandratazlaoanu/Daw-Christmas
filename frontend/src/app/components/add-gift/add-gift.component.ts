@@ -1,24 +1,24 @@
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
+import { Router } from '@angular/router';
+import { ChristmasPageComponent } from '../pages/christmas-page/christmas-page.component';
 import List from 'src/app/models/List';
 import { TodoService } from 'src/app/services/todo/todo.service';
-import User from 'src/app/models/User';
-import { Router } from '@angular/router';
 
 @Component({
-	selector: 'app-lists',
-	templateUrl: './german-page.component.html',
-	styleUrls: [ './german-page.component.css' ]
+	selector: 'app-add-gift',
+	templateUrl: './add-gift.component.html',
+	styleUrls: [ './add-gift.component.css' ]
 })
-export class GermanPageComponent implements OnInit {
+export class AddGiftComponent implements OnInit {
+	constructor(private page: ChristmasPageComponent, private todoService: TodoService, public router: Router) {}
+
 	lists: List[];
-	user: User;
 	selectedList: List;
 	addNew: boolean = false;
 	saveNew: boolean = true;
+	display: boolean = false;
 	@ViewChild('newListName', { static: false })
 	newListName: ElementRef;
-
-	constructor(private todoService: TodoService, public router: Router) {}
 
 	async ngOnInit() {
 		this.lists = await this.todoService.getLists();
@@ -55,5 +55,8 @@ export class GermanPageComponent implements OnInit {
 			.catch((err) => {
 				return false;
 			});
+	}
+	closeModal() {
+		this.page.display = false;
 	}
 }

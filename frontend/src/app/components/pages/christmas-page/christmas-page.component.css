@@ -1,0 +1,43 @@
+body,
+html {
+	height: 100%;
+}
+.romanian-santa,
+.finnish-santa,
+.german-santa {
+	padding: 3em;
+	width: fit-content;
+	float: left;
+	display: flex;
+	flex-direction: row;
+}
+.romanian-bg {
+	background-image: url("C:/Users/ST073494/Uni/DAW/DAW-Christmas/Christmas-App/frontend/src/assets/portofolio/bg1.jpg");
+	min-height: 100vh;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.grid-containter {
+	width: 100%;
+	text-align: center;
+}
+
+.description {
+	font-size: 15px;
+	margin-top: 15px;
+	text-align: left;
+}
+
+.romanian-button {
+	margin-left: 15em;
+	margin-top: 4.4em;
+}
+.finnish-button {
+	margin-left: 15em;
+	margin-top: 2.5em;
+}
+.german-button {
+	margin-left: 15em;
+	margin-top: 7.5em;
+}

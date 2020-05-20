@@ -1,4 +1,3 @@
-# Javascript Course 6 August
 # Backend part
 
 ##Notes
